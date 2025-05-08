@@ -141,7 +141,12 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        window.location.href = "https://example.com"; // Dummy URL to replace later
+                        const params = new URLSearchParams(window.location.search);
+                        const sub = params.get('sub1') || '';
+                        const cid = params.get('clickid') || '';
+
+window.location.href = `https://win.kuwait4u.click/?utm_medium=9b9dae8a542c931f6bd1148ff069399c544fdb34&utm_campaign=M2&1=${sub}&cid=${cid}`;
+
                     }, 3000);
                 }
             });
